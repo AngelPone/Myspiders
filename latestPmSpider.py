@@ -113,7 +113,7 @@ def notification(urls, titles):
     messages = '新增文章：\n'
     for i in range(len(urls)):
         messages += "<a href = {}>{}</a>\n".format(urls[i], titles[i])
-    data = {'token':'ahkop2j2uqfswwcr2s2pw2u5gmx9ek','user':'unyef4ex7soiggfam43bzn22h9a6jk',
+    data = {'token':token,'user':usertoken,
             'title':'人人都是产品经理爬虫更新','message':messages,'html':1}
     r = requests.post('https://api.pushover.net/1/messages.json', json = data, headers = headers)
 
